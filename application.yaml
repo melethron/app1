@@ -5,15 +5,20 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: app1
 spec:
+  project: app1
+
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-  project: busybox
+
   source:
-    path: "dev"
-    repoURL: 'https://github.com/melethron/app1.git'
-    targetRevision: "HEAD"
+    repoURL: https://github.com/jfelten/helm-charts.git
+    targetRevision: HEAD
+    path: charts/busybox
+
   syncPolicy:
     automated:
       prune: true
