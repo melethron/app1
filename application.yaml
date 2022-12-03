@@ -16,7 +16,7 @@ spec:
 
   source:
     repoURL: https://github.com/melethron/helm-charts.git
-    targetRevision: HEAD
+    targetRevision: master
     path: charts/busybox
 
   syncPolicy:
