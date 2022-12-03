@@ -15,7 +15,7 @@ spec:
     namespace: default
 
   source:
-    repoURL: https://github.com/jfelten/helm-charts.git
+    repoURL: https://github.com/melethron/helm-charts.git
     targetRevision: HEAD
     path: charts/busybox
 
